@@ -18,6 +18,10 @@ app.use(cors())
 
 app.use('/posts' , postRoutes )
 
+app.use('/' , ( req , res ) => {
+    res.send("Hello to Memories API");
+})
+
 //db connect
 const connectionURL = process.env.CONNECTION_URL
 const port = process.env.PORT || 5000;
